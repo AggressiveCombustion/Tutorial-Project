@@ -17,6 +17,8 @@ public class PlayerController : PhysicsObject
 
     public GameObject dustTrail;
     public int dustEmissionRate = 5;
+
+    public Transform cam;
     
     Vector3 startPos;
 
@@ -111,6 +113,11 @@ public class PlayerController : PhysicsObject
     public void TakeDamage(float amount)
     {
         GetComponent<Damageable>().TakeDamage(amount);
+
+        cam.GetComponent<Animator>().SetTrigger("shake");
+
+        int r = Random.Range(0, 2);
+        cam.GetComponent<Animator>().SetInteger("shakeIndex", r);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
