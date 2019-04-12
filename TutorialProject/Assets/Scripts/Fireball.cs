@@ -10,13 +10,13 @@ public class Fireball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.instance.AddTimer(gameObject, 5.0f, DestroySelf);
+        Destroy(gameObject, 5);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += speed * Time.deltaTime;
+        transform.position += speed * Time.deltaTime * GameManager.instance.speed;
     }
 
     public void DestroySelf()

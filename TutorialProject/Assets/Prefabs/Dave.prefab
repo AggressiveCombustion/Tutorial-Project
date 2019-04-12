@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3222211961619838171}
   - component: {fileID: 3222211961619838169}
   - component: {fileID: 3222211961619838168}
+  - component: {fileID: 2886644928829447839}
   m_Layer: 0
   m_Name: dave_idle_0
   m_TagString: Untagged
@@ -100,6 +101,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2886644928829447839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3222211961619838166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b360d07b4045add44a72506a1be9ef8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3222211961650369618
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +265,7 @@ MonoBehaviour:
   sprite: {fileID: 3222211961619838169}
   dustTrail: {fileID: 3222211963392678542}
   dustEmissionRate: 5
+  cam: {fileID: 0}
 --- !u!61 &3222211961650369624
 BoxCollider2D:
   m_ObjectHideFlags: 0

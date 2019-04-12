@@ -9,8 +9,7 @@ public class DestroyAfterSeconds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        GameManager.instance.AddTimer(gameObject, amount, DestroySelf);
+        Destroy(gameObject, amount);
     }
 
     // Update is called once per frame

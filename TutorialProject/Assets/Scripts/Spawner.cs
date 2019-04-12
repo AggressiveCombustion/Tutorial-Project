@@ -7,21 +7,28 @@ public class Spawner : MonoBehaviour
     public float rate = 1.0f;
     public GameObject obj;
 
+    public float elapsed = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.instance.AddTimer(gameObject, rate, Spawn);
+        Spawn();
     }
 
     void Spawn()
     {
         Instantiate(obj, transform.position, transform.rotation);
-        GameManager.instance.AddTimer(gameObject, rate, Spawn);
+        elapsed = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        elapsed += Time.deltaTime;
+
+        if(elapsed > rate)
+        {
+            Spawn();
+        }
     }
 }

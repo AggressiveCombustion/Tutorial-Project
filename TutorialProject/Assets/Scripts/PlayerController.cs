@@ -131,7 +131,7 @@ public class PlayerController : PhysicsObject
 
     public void DeathByFall()
     {
-        GameManager.instance.AddTimer(gameObject, 0.5f, ResetPosition);
+        ResetPosition();
     }
 
     public void ResetPosition()
