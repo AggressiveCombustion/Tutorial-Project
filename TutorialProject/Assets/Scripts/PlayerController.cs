@@ -6,8 +6,7 @@ public class PlayerController : PhysicsObject
 {
     public float maxSpeed = 3.0f;
     public float jumpForce = 5.0f;
-
-    bool prevGrounded = false;
+    
     float facing = 1;
 
     public float killY = -10;
@@ -19,6 +18,10 @@ public class PlayerController : PhysicsObject
     public int dustEmissionRate = 5;
     
     Vector3 startPos;
+
+    public Transform height;
+
+    bool prev_grounded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +36,8 @@ public class PlayerController : PhysicsObject
         base.Update();
         anim.SetFloat("moveSpeed", Mathf.Abs(velocity.x));
         sprite.flipX = facing != 1;
+
+        prev_grounded = grounded;
     }
     
     protected override void ComputeVelocity()
@@ -67,7 +72,7 @@ public class PlayerController : PhysicsObject
         if (Input.GetButtonDown("Jump") && grounded)
         {
             velocity.y = jumpForce;
-
+            height.GetComponent<Animator>().SetTrigger("stretch");
         }
 
         else if (Input.GetButtonUp("Jump"))
@@ -80,17 +85,9 @@ public class PlayerController : PhysicsObject
 
         targetVelocity = move * maxSpeed;
 
-        // check if we're hitting the ground
-        if (!prevGrounded && grounded)
-        {
-        }
-
-        // check if we're leaving the ground
-        if (prevGrounded && !grounded)
-        {
-        }
-
-        prevGrounded = grounded;
+        // check if landing
+        if (grounded && !prev_grounded)
+            height.GetComponent<Animator>().SetTrigger("squash");
 
         // death by fall
         if (transform.position.y < killY)

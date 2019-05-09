@@ -1064,12 +1064,12 @@ PrefabInstance:
     - target: {fileID: 3222211961650369625, guid: e5b8a6ee1db531d45a5d569aeeb17b9b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.19
+      value: -2.65
       objectReference: {fileID: 0}
     - target: {fileID: 3222211961650369625, guid: e5b8a6ee1db531d45a5d569aeeb17b9b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.17
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 3222211961650369625, guid: e5b8a6ee1db531d45a5d569aeeb17b9b,
         type: 3}
@@ -1116,8 +1116,48 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3222211961650369620, guid: e5b8a6ee1db531d45a5d569aeeb17b9b,
+        type: 3}
+      propertyPath: height
+      value: 
+      objectReference: {fileID: 6245657765597865297}
+    - target: {fileID: 6245657765597865297, guid: e5b8a6ee1db531d45a5d569aeeb17b9b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245657765597865297, guid: e5b8a6ee1db531d45a5d569aeeb17b9b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5b8a6ee1db531d45a5d569aeeb17b9b, type: 3}
+--- !u!1 &4489598749326255120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4489598749326255120, guid: e5b8a6ee1db531d45a5d569aeeb17b9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3222211963144397729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4489598749326255121
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4489598749326255120}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2eab222868ee6f748bd42b4aa6c03a1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4494625127833913697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1129,6 +1169,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FireballSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4494625127481288411, guid: 257d7faa07ec2404ba4b5c4453f4ed0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4494625127481288413, guid: 257d7faa07ec2404ba4b5c4453f4ed0b,
         type: 3}
@@ -1187,3 +1232,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 257d7faa07ec2404ba4b5c4453f4ed0b, type: 3}
+--- !u!4 &6245657765597865297 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6245657765597865297, guid: e5b8a6ee1db531d45a5d569aeeb17b9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3222211963144397729}
+  m_PrefabAsset: {fileID: 0}
